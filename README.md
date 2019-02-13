@@ -44,7 +44,12 @@
 ```
 ./darknet detector train cfg/coco.data cfg/yolov3.cfg backup/yolov3.backup -gpus 0,1,2,3
 ```
-### Results
+### Car detection using Faster R-CNN
+![alt text](https://github.com/aniskoubaa/car_detection_yolo_faster_rcnn_uvsc2019/blob/master/car-detection-faster-r-cnn.jpg)
+
+### Car detection using YOLO v3
+![alt text](https://github.com/aniskoubaa/car_detection_yolo_faster_rcnn_uvsc2019/blob/master/car-detection-yolo-v3.png)
+
 
 
 
