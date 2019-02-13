@@ -37,12 +37,16 @@
 * To train the model Faster R-CNN on the constructed dataset, we used [Tensoflow Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection).
 * A quick start file is provided to run how the run Tensorflow Object Detection API on a chosen dataset: [Running Tensorflow Object Detection on Pets Dataset](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/running_pets.md)
 * We used the pretrained weights for Faster R-CNN model based on the Feature Extractor Inception v2 and pretrained on COCO dataset. The model is provided here: [Tensorflow Object Detection API model zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md)
+* If data is prepared and ready in the training folder, run this command from the object_detection folder:
+```
+python train.py --logtostderr --train_dir=training/ --pipeline_config_path=training/faster_rcnn_inception_v2_coco.config
+````
 
 ### Training YOLO v3
 * To train the model YOLO v3, we used the default YOLO v3 implementation provided here: [YOLO v3](https://pjreddie.com/darknet/yolo/).
 * After building the training binary for YOLO: run the following command:
 ```
-./darknet detector train cfg/coco.data cfg/yolov3.cfg backup/yolov3.backup -gpus 0,1,2,3
+./darknet detector train cfg/voc.data cfg/yolov3-voc.cfg darknet53.conv.74
 ```
 ### Car detection using Faster R-CNN
 ![alt text](https://github.com/aniskoubaa/car_detection_yolo_faster_rcnn_uvsc2019/blob/master/car-detection-faster-r-cnn.jpg)
